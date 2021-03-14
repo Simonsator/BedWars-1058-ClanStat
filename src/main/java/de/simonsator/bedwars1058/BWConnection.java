@@ -1,4 +1,4 @@
-package de.simonsator.bedwarsstatsrel;
+package de.simonsator.bedwars1058;
 
 
 import de.simonsator.partyandfriends.communication.sql.SQLCommunication;
@@ -22,9 +22,9 @@ public class BWConnection extends SQLCommunication {
 		Statement stmt = null;
 		ResultSet rs = null;
 		try {
-			rs = (stmt = con.createStatement()).executeQuery("select kills, wins, loses, games, kd, destroyedBeds, deaths from `" + this.DATABASE + "`." + "bw_stats_players WHERE uuid='" + pUUID.toString() + "' LIMIT 1");
+			rs = (stmt = con.createStatement()).executeQuery("select kills, wins, looses, games_played,  beds_destroyed, deaths from `" + this.DATABASE + "`.global_stats WHERE uuid='" + pUUID.toString() + "' LIMIT 1");
 			if (rs.next()) {
-				return new PlayerData(rs.getInt("wins"), rs.getInt("loses"), rs.getInt("games"), rs.getInt("destroyedBeds"), rs.getDouble("kd"), rs.getInt("deaths"), rs.getInt("kills"));
+				return new PlayerData(rs.getInt("wins"), rs.getInt("looses"), rs.getInt("games_played"), rs.getInt("beds_destroyed"), rs.getInt("deaths"), rs.getInt("kills"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

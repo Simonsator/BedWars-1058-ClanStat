@@ -1,4 +1,4 @@
-package de.simonsator.bedwarsstatsrel;
+package de.simonsator.bedwars1058;
 
 
 public class PlayerData {
@@ -11,12 +11,12 @@ public class PlayerData {
 	public final int deaths;
 	public final int kills;
 
-	public PlayerData(int wins, int loses, int games, int destroyedBeds, double kd, int deaths, int kills) {
+	public PlayerData(int wins, int loses, int games, int destroyedBeds, int deaths, int kills) {
 		this.wins = wins;
 		this.loses = loses;
 		this.games = games;
 		this.destroyedBeds = destroyedBeds;
-		this.kd = kd;
+		this.kd = (double) kills / deaths;
 		this.deaths = deaths;
 		this.kills = kills;
 	}

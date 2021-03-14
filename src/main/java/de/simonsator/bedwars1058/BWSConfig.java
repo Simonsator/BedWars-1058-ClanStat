@@ -1,4 +1,4 @@
-package de.simonsator.bedwarsstatsrel;
+package de.simonsator.bedwars1058;
 
 
 import de.simonsator.partyandfriends.api.PAFExtension;

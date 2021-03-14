@@ -1,4 +1,4 @@
-package de.simonsator.bedwarsstatsrel;
+package de.simonsator.bedwars1058;
 
 import de.simonsator.partyandfriends.api.PAFExtension;
 import de.simonsator.partyandfriends.utilities.Language;
@@ -17,6 +17,7 @@ public class BWSMessages extends LanguageConfiguration {
 	}
 
 	private void loadDefaultValues() {
+		set("ClanStats.StatName", "BedWars");
 		set("ClanStats.Wins", "&7The clan has won &a[WON] &7games.");
 		set("ClanStats.Lost", "&7The clan has lost &a[LOST] &7games.");
 		set("ClanStats.Played", "&7The clan has played &a[GAMES] &7games.");
